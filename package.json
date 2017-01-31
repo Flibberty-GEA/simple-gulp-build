@@ -1,0 +1,10 @@
+{
+  "name": "simple-gulp-build",
+  "version": "1.0.0",
+  "description": "Set up clean gulp build with basic tasks",
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+      "gulp": "^3.9.1"
+   }
+}
