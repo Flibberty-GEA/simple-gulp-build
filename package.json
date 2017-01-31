@@ -5,6 +5,8 @@
   "author": "Me",
   "license": "ISC",
   "dependencies": {
-      "gulp": "^3.9.1"
-   }
+    "gulp": "^3.9.1",
+    "gulp-csso": "2.0.0"
+  }
 }
+
