@@ -1,0 +1,63 @@
+section {
+    font-size: 24px;
+    color: red;
+}
+
+.marketing {
+    margin: 0px;
+    margin-left: -10px;
+    margin-bottom: 40px;
+    padding: 0px 0px;
+    font-size: 15px;
+    font-style: normal;
+    fond-variant: normal;
+    fort-weight: normal;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+    line-height: 22.5px;
+}
+
+.marketing a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #cb3837;
+}
+
+.marketing h3 {
+    display: block;
+    margin: 0;
+    padding: 20px 0 10px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.marketing h3 a {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.marketing h3 a:hover {
+    color: #cb3837;
+}
+
+.marketing p {
+    line-height: 22.5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marketing p a {
+    white-space: nowrap;
+}
+
+#marketing-texthed {
+    margin-left: 10px;
+}
