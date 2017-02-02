@@ -14,10 +14,13 @@
     "gulp-uglify": "2.0.1",
     "gulp-concat": "2.6.1",
     "gulp-watch": "4.3.11",
+    "gulp-rev": "7.1.2",
+    "gulp-fingerprint": "0.3.2",
     "normalize.css": "*",
     "jquery": "2.*"
   },
   "devDependencies": {
+    "gulp-md5-assets": "0.1.10",
     "browser-sync": "2.18.7"
   }
 }

@@ -8,30 +8,36 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
     uglify = require('gulp-uglify'),
     concatJs = require('gulp-concat'),
+    rev = require('gulp-rev'),
+    md5 = require("gulp-md5-assets"),
+    fingerprint = require('gulp-fingerprint'),
     browserSync = require("browser-sync"),
     watch = require('gulp-watch'),
     reload = browserSync.reload;
 
-            var path = {
-                build: {
-                    html: 'build/',
-                    js: 'build/js/',
-                    css: 'build/css/'
-                },
-                src: {
-                    html: 'src/*.html',
-                    js: 'src/js/main.js',
-                    allJs: 'src/js/**/*.js',
-                    scss: 'src/scss/main.scss',
-                    css: 'src/css/*.css'
-                },
-                watch: {
-                    html: 'src/**/*.html',
-                    js: 'src/js/**/*.js',
-                    scss: 'src/scss/**/*.scss',
-                    css: 'src/css/**/*.css'
-                }
-            };
+// rev-manifest.json produced from gulp-rev
+var manifest = require('../../dist/rev-manifest');
+
+var path = {
+    build: {
+        html: 'build/',
+        js: 'build/js/',
+        css: 'build/css/'
+    },
+    src: {
+        html: 'src/*.html',
+        js: 'src/js/main.js',
+        allJs: 'src/js/**/*.js',
+        scss: 'src/scss/main.scss',
+        css: 'src/css/*.css'
+    },
+    watch: {
+        html: 'src/**/*.html',
+        js: 'src/js/**/*.js',
+        scss: 'src/scss/**/*.scss',
+        css: 'src/css/**/*.css'
+    }
+};
 
 var config = {
     server: {
@@ -40,24 +46,24 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "APP_LOGGER"
+    logPrefix: "Culp_logger"
 };
 
 gulp.task('webserver', function () {
     browserSync(config);
 });
 
-gulp.task('watch', function(){
-    watch([path.watch.html], function(event, cb) {
+gulp.task('watch', function () {
+    watch([path.watch.html], function (event, cb) {
         gulp.start('html:build');
     });
-    watch([path.watch.scss], function(event, cb) {
+    watch([path.watch.scss], function (event, cb) {
         gulp.start('scss:build');
     });
-    watch([path.watch.css], function(event, cb) {
+    watch([path.watch.css], function (event, cb) {
         gulp.start('css:build');
     });
-    watch([path.watch.js], function(event, cb) {
+    watch([path.watch.js], function (event, cb) {
         gulp.start('js:build');
     });
 });
